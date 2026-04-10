@@ -23,7 +23,7 @@ A state-of-the-art deepfake detection system built with PyTorch and EfficientNet
 
 For detailed system architecture diagrams, data flow, and component interactions, see [ARCHITECTURE.md](ARCHITECTURE.md).
 
-## �🚀 Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 
