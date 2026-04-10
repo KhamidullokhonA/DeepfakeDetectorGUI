@@ -6,7 +6,7 @@ A state-of-the-art deepfake detection system built with PyTorch and EfficientNet
 
 - 👨‍💻 [T RAHUL SINGH](https://github.com/TRahulsingh)
 - 🧑‍💻 [Mallikarjun Macherla](https://github.com/Mallikarjun-Macherla)
-- 🧑‍💻 [Prakash Madasu](https://github.com/sainathch45/)
+- 🧑‍💻 [Sainath](https://github.com/sainathch45/)
 
 ---
 
@@ -19,7 +19,11 @@ A state-of-the-art deepfake detection system built with PyTorch and EfficientNet
 - **Training Pipeline**: Complete PyTorch Lightning training infrastructure
 - **Model Export**: Support for PyTorch (.pt) and ONNX format exports
 
-## 🚀 Quick Start
+## 📐 System Architecture
+
+For detailed system architecture diagrams, data flow, and component interactions, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+## �🚀 Quick Start
 
 ### Prerequisites
 
@@ -62,15 +66,16 @@ The web app will open in your browser where you can:
 Classify individual images:
 
 ```bash
-python classify.py --image path/to/your/image.jpg
+python classify.py path/to/your/image.jpg
 ```
 
 #### 🎥 Video Analysis
 
-Process videos frame by frame:
+Process videos from a folder:
 
 ```bash
-python inference/video_inference.py --video path/to/your/video.mp4
+# Place videos in 'videos_to_predict' folder, then run:
+python inference/video_inference.py
 ```
 
 ## 📂 Supported Datasets
@@ -200,12 +205,6 @@ num_epochs: 10
 python main_trainer.py
 ```
 
-or
-
-```bash
-python model_trainer.py
-```
-
 The training will:
 - Use PyTorch Lightning for efficient training
 - Save best model based on validation loss
@@ -230,6 +229,7 @@ tensorboard --logdir lightning_logs
 ├── config.yaml                   # Training configuration
 ├── requirements.txt              # Python dependencies
 ├── README.md                     # Project documentation
+├── ARCHITECTURE.md               # System architecture & design
 ├── LICENSE                       # MIT License
 ├── .gitignore                    # Git ignore rules
 ├── data/                         # Dataset storage (not tracked by git)
